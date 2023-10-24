@@ -6,7 +6,7 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 00:37:16 by tduprez           #+#    #+#             */
-/*   Updated: 2023/10/24 00:37:23 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2023/10/24 16:06:21 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,39 +19,45 @@ int	main(void)
 
 		for (unsigned int i = 0; i < 45; i++)
 		{
-			array.setValueToTab(i, i);
-			std::cout << array.getValueFromTab(i) << std::endl;
+			array[i] = i;
+			std::cout << array[i] << std::endl;
 		}
 		std::cout << "Size of array : " << array.memberSize() << std::endl;
+		std::cout << "----------------------------------------" << std::endl;
 	}
 
 	{
-		Array<char>	array(45);
+		Array<char>	array(42);
 
-		for (unsigned int i = 0; i < 45; i++)
+		for (unsigned int i = 0; i < 42; i++)
 		{
-			array.setValueToTab(i + 48, i);
-			std::cout << array.getValueFromTab(i) << std::endl;
+			array[i] = i + 48;
+			std::cout << array[i] << std::endl;
 		}
 		std::cout << "Size of array : " << array.memberSize() << std::endl;
+		std::cout << "----------------------------------------" << std::endl;
 	}
 	
 	{
-		Array<int>	array(45);
+		Array<int>	array(31);
 		Array<int>	array2(array);
 
-		for (unsigned int i = 0; i < 45; i++)
+		for (unsigned int i = 0; i < 31; i++)
 		{
-			array.setValueToTab(i + 48, i);
-			std::cout << array.getValueFromTab(i) << std::endl;
+			array[i] = i + 48;
+			std::cout << array[i] << std::endl;
 		}
-
-		for (unsigned int i = 0; i < 45; i++)
+		for (unsigned int i = 0; i < 31; i++)
+			std::cout << array2[i] << std::endl;
+		try
 		{
-			// array.setValueToTab(i + 48, i);
-			std::cout << array2.getValueFromTab(i) << std::endl;
+			std::cout << array[150] << std::endl;
 		}
-		// std::cout << "Size of array : " << array.memberSize() << std::endl;
+		catch (const std::out_of_range& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		std::cout << "Size of array : " << array.memberSize() << std::endl;
 	}
 
 	return 0;
