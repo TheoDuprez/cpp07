@@ -6,9 +6,12 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 23:36:45 by tduprez           #+#    #+#             */
-/*   Updated: 2023/10/24 16:05:17 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2023/12/14 17:11:47 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 
 #include <iostream>
 #include <cstdlib>
@@ -104,3 +107,5 @@ unsigned int	Array<T>::memberSize(void) const
 {
 	return this->_size;
 }
+
+#endif

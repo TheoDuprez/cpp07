@@ -6,11 +6,12 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:05:56 by tduprez           #+#    #+#             */
-/*   Updated: 2023/10/23 16:57:53 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2023/12/14 17:06:19 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
 
 #include <iostream>
 
@@ -37,3 +38,4 @@ const T&	max(const T& a, const T& b)
 	return (a > b) ? a : b;
 }
 
+#endif

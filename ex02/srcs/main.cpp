@@ -6,7 +6,7 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 00:37:16 by tduprez           #+#    #+#             */
-/*   Updated: 2023/10/24 16:06:21 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2023/10/24 19:35:01 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ int	main(void)
 		Array<int>	array(45);
 
 		for (unsigned int i = 0; i < 45; i++)
-		{
-			array[i] = i;
-			std::cout << array[i] << std::endl;
-		}
+			std::cout << (array[i] = i) << std::endl;
 		std::cout << "Size of array : " << array.memberSize() << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
 	}
@@ -30,10 +27,7 @@ int	main(void)
 		Array<char>	array(42);
 
 		for (unsigned int i = 0; i < 42; i++)
-		{
-			array[i] = i + 48;
-			std::cout << array[i] << std::endl;
-		}
+			std::cout << (array[i] = i + 48) << std::endl;
 		std::cout << "Size of array : " << array.memberSize() << std::endl;
 		std::cout << "----------------------------------------" << std::endl;
 	}
@@ -43,10 +37,7 @@ int	main(void)
 		Array<int>	array2(array);
 
 		for (unsigned int i = 0; i < 31; i++)
-		{
-			array[i] = i + 48;
-			std::cout << array[i] << std::endl;
-		}
+			std::cout << (array[i] = i + 48) << std::endl;
 		for (unsigned int i = 0; i < 31; i++)
 			std::cout << array2[i] << std::endl;
 		try

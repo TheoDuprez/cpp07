@@ -6,11 +6,12 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:01:54 by tduprez           #+#    #+#             */
-/*   Updated: 2023/10/23 17:24:13 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2023/12/14 17:06:43 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef ITER_HPP
+# define ITER_HPP
 
 #include <iostream>
 
@@ -21,3 +22,5 @@ void	iter(const T* array, int size, void(*function)(const T& item))
 		function(array[i]);
 	return ;
 }
+
+#endif

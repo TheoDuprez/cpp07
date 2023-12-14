@@ -6,7 +6,7 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:07:33 by tduprez           #+#    #+#             */
-/*   Updated: 2023/10/23 17:22:56 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2023/12/14 17:07:27 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ int main()
 }
 
 template <typename T>
-static void ft_printer(T const & item)
+static void ft_printer(const T& item)
 {
 	std::cout << item << std::endl;
 }
-
