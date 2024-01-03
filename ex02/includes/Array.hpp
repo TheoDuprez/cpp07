@@ -6,7 +6,7 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 23:36:45 by tduprez           #+#    #+#             */
-/*   Updated: 2023/12/14 17:11:47 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2024/01/03 15:22:00 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,12 @@ Array<T>::Array(unsigned int n): _size(n)
 template <typename T>
 Array<T>::Array(const Array& obj)
 {
-	this->_array = NULL;
-	this->_size = 0;
 	if (this != &obj)
+	{
+		this->_array = NULL;
+		this->_size = 0;
 		*this = obj;
+	}
 	return ;
 }
 
