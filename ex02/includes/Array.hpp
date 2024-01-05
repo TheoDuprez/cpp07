@@ -6,7 +6,7 @@
 /*   By: tduprez <tduprez@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 23:36:45 by tduprez           #+#    #+#             */
-/*   Updated: 2024/01/03 15:22:00 by tduprez          ###   ########lyon.fr   */
+/*   Updated: 2024/01/05 13:47:02 by tduprez          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ Array<T>::Array(const Array& obj)
 	if (this != &obj)
 	{
 		this->_array = NULL;
-		this->_size = 0;
 		*this = obj;
 	}
 	return ;
@@ -70,7 +69,7 @@ Array<T>& Array<T>::operator=(const Array& obj)
 	this->_size = obj._size;
 	if (this->_array)
 		delete [] this->_array;
-	this->_array = new T[this->_size];
+	this->_array = new T[this->_size]();
 	for (unsigned int i = 0; i < this->_size; i++)
 		this->_array[i] = obj._array[i];
 	return *this;
